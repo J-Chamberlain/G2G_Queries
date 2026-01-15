@@ -2,18 +2,18 @@ import pandas as pd
 from reaf_engine import REAFEngine
 
 def main():
-    # Placeholder for loading data - User will need to provide actual paths
+    # Loading data from SQL Tables folder
     print("Loading data sources...")
     try:
         data_sources = {
-            'max_output': pd.read_csv('path_to_max_output.csv'),
-            'strategies': pd.read_csv('path_to_strategies.csv'),
-            'prelim_gaps': pd.read_csv('path_to_prelim_gaps.csv'),
-            'strat_tech_cost': pd.read_csv('path_to_strat_tech_cost.csv'),
-            'building_summary': pd.read_csv('path_to_building_summary.csv')
+            'max_output': pd.read_csv('SQL Tables\\[MAX_output_for_SQL_2_24].csv'),
+            'strategies': pd.read_csv('SQL Tables\\Strategies.csv'),
+            'prelim_gaps': pd.read_csv('SQL Tables\\Power_Prelim_to_Library_gaps.csv'),
+            'strat_tech_cost': pd.read_csv('SQL Tables\\Gap_Strat_Tech_Cost.csv'),
+            'building_summary': pd.read_csv('SQL Tables\\Building_summary_data.csv')
         }
-    except FileNotFoundError:
-        print("Warning: Source data files not found. Please update path_to_... with actual CSV paths.")
+    except FileNotFoundError as e:
+        print(f"Error: Source data files not found. {e}")
         return
 
     # Initialize Engine

@@ -34,24 +34,24 @@ class REAFEngine:
         
         # STEP 1: Calculate Initial Mission Success Scores (MSS) per Strategy
         # MSS1: Coverage + C1 Contribution
-        df_max['MSS1_val'] = df_max.apply(lambda r: (r['coverage'] + r['C1_App'] / 3.0) if r['C1_App'] != 0 else r['coverage'], axis=1)
+        df_max['MSS1_val'] = df_max.apply(lambda r: (r['Coverage'] + r['C1_App'] / 3.0) if r['C1_App'] != 0 else r['Coverage'], axis=1)
         # MSS2: Coverage + C1 or C2
-        df_max['MSS2_val'] = df_max.apply(lambda r: (r['coverage'] + r['C1_App'] / 3.0) if r['C1_App'] != 0 
-                                          else (r['coverage'] + r['C2_App'] / 3.0) if r['C2_App'] != 0 
-                                          else r['coverage'], axis=1)
+        df_max['MSS2_val'] = df_max.apply(lambda r: (r['Coverage'] + r['C1_App'] / 3.0) if r['C1_App'] != 0 
+                                          else (r['Coverage'] + r['C2_App'] / 3.0) if r['C2_App'] != 0 
+                                          else r['Coverage'], axis=1)
         # MSS3: Coverage + C1, C2, or C3
-        df_max['MSS3_val'] = df_max.apply(lambda r: (r['coverage'] + r['C3_App'] / 3.0) if r['C3_App'] != 0 
-                                          else (r['coverage'] + r['C2_App'] / 3.0) if r['C2_App'] != 0 
-                                          else (r['coverage'] + r['C1_App'] / 3.0) if r['C1_App'] != 0 
-                                          else r['coverage'], axis=1)
+        df_max['MSS3_val'] = df_max.apply(lambda r: (r['Coverage'] + r['C3_App'] / 3.0) if r['C3_App'] != 0 
+                                          else (r['Coverage'] + r['C2_App'] / 3.0) if r['C2_App'] != 0 
+                                          else (r['Coverage'] + r['C1_App'] / 3.0) if r['C1_App'] != 0 
+                                          else r['Coverage'], axis=1)
 
-        grouped = df_max.groupby(['Installation_cd', 'Installation', 'Mission', 'Strat_ID', 'Resilience Category'])
+        grouped = df_max.groupby(['Installation_Cd', 'Installation', 'Mission', 'Strat_ID', 'Resilience Category'])
         
         mss_by_strategy = grouped.apply(lambda x: pd.Series({
-            'R_m_IEP_Score': 100 * (x['Adj_weight'] * x['coverage'] / x['Min Value']).sum(),
-            'MSS1': 100 * (x['Adj_weight'] * x['MSS1_val'] / x['Min Value']).sum(),
-            'MSS2': 100 * (x['Adj_weight'] * x['MSS2_val'] / x['Min Value']).sum(),
-            'MSS3': 100 * (x['Adj_weight'] * x['MSS3_val'] / x['Min Value']).sum()
+            'R_m_IEP_Score': 100 * (x['Adj_Weight'] * x['Coverage'] / x['Min Value']).sum(),
+            'MSS1': 100 * (x['Adj_Weight'] * x['MSS1_val'] / x['Min Value']).sum(),
+            'MSS2': 100 * (x['Adj_Weight'] * x['MSS2_val'] / x['Min Value']).sum(),
+            'MSS3': 100 * (x['Adj_Weight'] * x['MSS3_val'] / x['Min Value']).sum()
         })).reset_index()
 
         self.state['updated_mss_by_strategy'] = mss_by_strategy.copy()
@@ -66,7 +66,7 @@ class REAFEngine:
         impact_by_mission = impact_by_mission[impact_by_mission['Delta_uncapped'] > 0]
 
         building_summary = self.data['building_summary']
-        impact_by_installation = impact_by_mission.groupby(['Installation_cd', 'Installation', 'Strat_ID', 'Strategy / Capability', 'Scale']).agg({
+        impact_by_installation = impact_by_mission.groupby(['Installation_Cd', 'Installation', 'Strat_ID', 'Strategy / Capability', 'Scale']).agg({
             'Delta_uncapped': 'sum',
             'MSS3': 'sum'
         }).reset_index()
@@ -75,7 +75,7 @@ class REAFEngine:
         impact_by_installation['% Impact_Potential'] = impact_by_installation['Impact_Potential'] / (impact_by_installation['MSS3'].replace(0, np.nan))
         impact_by_installation['% Impact_Potential'] = impact_by_installation['% Impact_Potential'].fillna(0)
         
-        impact_by_installation = impact_by_installation.merge(building_summary, on='Installation_cd')
+        impact_by_installation = impact_by_installation.merge(building_summary, on='Installation_Cd')
 
         self.state['strategy_impact_by_installation'] = impact_by_installation
         self.state['prelim_gaps_working'] = self.data['prelim_gaps'].copy()
@@ -88,7 +88,7 @@ class REAFEngine:
         mss_detailed = self.state['updated_mss_by_strategy']
         
         # Step 5: Roll up to Mission/Category
-        mss_scores = mss_detailed.groupby(['Installation_cd', 'Installation', 'Mission', 'Resilience Category']).agg({
+        mss_scores = mss_detailed.groupby(['Installation_Cd', 'Installation', 'Mission', 'Resilience Category']).agg({
             'R_m_IEP_Score': 'sum',
             'MSS1': 'sum',
             'MSS2': 'sum',
@@ -99,20 +99,20 @@ class REAFEngine:
             mss_scores[f'{col}_Capped'] = mss_scores[col].clip(upper=100)
 
         # Step 6: Mission Roll-up (Avg of capped categories)
-        mission_scores = mss_scores.groupby(['Installation_cd', 'Installation', 'Mission'])['R_m_IEP_Score_Capped'].mean().reset_index()
+        mission_scores = mss_scores.groupby(['Installation_Cd', 'Installation', 'Mission'])['R_m_IEP_Score_Capped'].mean().reset_index()
         mission_scores.rename(columns={'R_m_IEP_Score_Capped': 'Mission_IEP_Score'}, inplace=True)
 
         # Step 7: Installation Category Roll-up (Avg uncapped, then cap)
-        inst_category_scores = mss_scores.groupby(['Installation_cd', 'Installation', 'Resilience Category'])['R_m_IEP_Score'].mean().reset_index()
+        inst_category_scores = mss_scores.groupby(['Installation_Cd', 'Installation', 'Resilience Category'])['R_m_IEP_Score'].mean().reset_index()
         inst_category_scores['Installation_level_R_Score'] = inst_category_scores['R_m_IEP_Score'].clip(upper=100)
 
         # Step 8: Final Installation Score (Avg of capped category scores)
         # SQL logic: SELECT DISTINCT installation, resilience category, installation_level_R_score FROM #TT3, then average
-        final_scores = inst_category_scores.groupby(['Installation_cd', 'Installation'])['Installation_level_R_Score'].mean().reset_index()
+        final_scores = inst_category_scores.groupby(['Installation_Cd', 'Installation'])['Installation_level_R_Score'].mean().reset_index()
         final_scores.rename(columns={'Installation_level_R_Score': 'Installation_IEP_Score'}, inplace=True)
 
         # Combine into updated_scores state
-        self.state['updated_scores'] = inst_category_scores.merge(mission_scores, on=['Installation_cd', 'Installation']).merge(final_scores, on=['Installation_cd', 'Installation'])
+        self.state['updated_scores'] = inst_category_scores.merge(mission_scores, on=['Installation_Cd', 'Installation']).merge(final_scores, on=['Installation_Cd', 'Installation'])
 
     def generate_gap_closure_opportunities(self, tech_id, reaf_scale, scope_filter, min_rel, min_tech_rel, clear_data=False):
         """Replicates GenerateGapClosureOpportunities"""
@@ -127,13 +127,13 @@ class REAFEngine:
 
         # Join p -> c (gaps to tech/strat) -> s (installation impact)
         merged = p.merge(c, left_on='gap_library_id', right_on='gap_id')
-        merged = merged.merge(s, left_on=['strategy_id', 'Installation_Cd'], right_on=['Strat_ID', 'Installation_Cd'])
+        merged = merged.merge(s, left_on=['strategy_id', 'Installation_Cd'], right_on=['Strat_ID', 'Installation_Cd'], suffixes=('_p', '_s'))
 
         # Filtering
         if tech_id is not None:
-            merged = merged[merged['Technology_id'] == tech_id]
+            merged = merged[merged['technology_id'] == tech_id]
         
-        merged = merged[merged['Scale_y'] == reaf_scale] # Scale from strategy impact
+        merged = merged[merged['Scale'] == reaf_scale] # Scale from strategy impact
         # Scope filter logic (LIKE '%Installation%')
         if scope_filter and '%' in scope_filter:
             pattern = scope_filter.replace('%', '.*')
@@ -167,7 +167,7 @@ class REAFEngine:
         self.state['gap_closure_opportunities'] = pd.concat([self.state['gap_closure_opportunities'], winners])
 
         # Aggregate Strategy Impact
-        strat_impact = winners.groupby(['Installation_Cd', 'Installation_x', 'strategy_id', 'Strategy', 'Impact_Potential', 'Technology_id', 'Technology', 'Scale_y', 'Mission or Installation Wide']).agg({
+        strat_impact = winners.groupby(['Installation_Cd', 'Installation', 'strategy_id', 'Strategy / Capability', 'Impact_Potential', 'technology_id', 'Technology', 'Scale', 'Mission or Installation Wide']).agg({
             'Cost Per Building Low ($)': 'mean',
             'Cost Per Building High ($)': 'mean',
             'prelim_gap_id': [lambda x: '; '.join(x.astype(str)), 'count']
@@ -207,7 +207,7 @@ class REAFEngine:
         
         # Merge closures into MSS
         for _, row in impact_tech.iterrows():
-            mask = (mss['Installation_cd'] == row['Installation_Cd']) & (mss['Strat_ID'] == row['Strategy_id'])
+            mask = (mss['Installation_Cd'] == row['Installation_Cd']) & (mss['Strat_ID'] == row['Strategy_id'])
             mss.loc[mask, 'R_m_IEP_Score'] = mss.loc[mask, 'MSS3']
             mss.loc[mask, 'MSS2'] = mss.loc[mask, 'MSS3']
             mss.loc[mask, 'MSS1'] = mss.loc[mask, 'MSS3']
@@ -216,7 +216,7 @@ class REAFEngine:
 
         # Capture pre-update scores
         if self.state['updated_scores'] is not None:
-            pre_update = self.state['updated_scores'][['Installation_cd', 'Installation_IEP_Score']].drop_duplicates()
+            pre_update = self.state['updated_scores'][['Installation_Cd', 'Installation_IEP_Score']].drop_duplicates()
         else:
             pre_update = pd.DataFrame()
 
@@ -224,9 +224,9 @@ class REAFEngine:
         self._calculate_scores()
         
         # Track improvements
-        post_update = self.state['updated_scores'][['Installation_cd', 'Installation', 'Installation_IEP_Score']].drop_duplicates()
+        post_update = self.state['updated_scores'][['Installation_Cd', 'Installation', 'Installation_IEP_Score']].drop_duplicates()
         if not pre_update.empty:
-            improvement = post_update.merge(pre_update, on='Installation_cd', suffixes=('', '_pre'))
+            improvement = post_update.merge(pre_update, on='Installation_Cd', suffixes=('', '_pre'))
             improvement['REAF_Score_Improvement'] = improvement['Installation_IEP_Score'] - improvement['Installation_IEP_Score_pre']
             improvement['Technology'] = technology_name
             self.state['technology_updates'] = pd.concat([self.state['technology_updates'], improvement])
