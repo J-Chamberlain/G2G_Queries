@@ -35,15 +35,15 @@ def main():
 
     # 2. Iterate through Technologies
     technologies = [
-        (12, 'Microgrid'),
-        (7, 'Substations'),
-        (14, 'Power Quality'),
-        (11, 'Generator Reliability'),
-        (15, 'Battery Energy Storage Systems (BESS)'),
-        (4, 'Uptime Institute Data Center Site Infrastructure Tier Standard'),
-        (10, 'Combustion Turbines (CT)'),
-        (2, 'Reciprocating Internal Combustion Engines (RICE)'),
-        (3, 'Solar Photovoltaic (PV)')
+        (12, 'Microgrid')#,
+      #  (7, 'Substations'),
+      #  (14, 'Power Quality'),
+      #  (11, 'Generator Reliability'),
+      #  (15, 'Battery Energy Storage Systems (BESS)'),
+      #  (4, 'Uptime Institute Data Center Site Infrastructure Tier Standard'),
+      #  (10, 'Combustion Turbines (CT)'),
+      #  (2, 'Reciprocating Internal Combustion Engines (RICE)'),
+      #  (3, 'Solar Photovoltaic (PV)')
     ]
 
     for tech_id, tech_name in technologies:
