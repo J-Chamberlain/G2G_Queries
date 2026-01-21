@@ -1,0 +1,99 @@
+Installation_Cd,Installation,Strategy_id,Strategy,Impact_Potential,Technology_id,Technology,REAF_Scale,PMR Gaps Scale,Avg_Cost_Low,Avg_Cost_High,Gaps_Closed,Count_of_gaps_closed,Row_ID
+AGGN,Altus Air Force Base,52.0,Installation-wide SCADA System (Energy),39.560439560439555,12.0,Microgrid,Installation,Installation,218750.0,537500.0,24; 28; 29; 48,4,1
+AGGN,Altus Air Force Base,127.0,Installation Microgrid,112.37869396280195,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,36,1,2
+AJXF,JB Andrews,48.0,Isolated Communications Strands / Zones,45.20288772715957,12.0,Microgrid,Installation,Installation,150000.0,350000.0,2944; 2944,2,3
+AJXF,JB Andrews,49.0,Priority Load-Shedding Protocol,26.644736842105264,12.0,Microgrid,Installation,Installation,75000.0,200000.0,2923; 2923; 2937; 2937,4,4
+AJXF,JB Andrews,79.0,Access to Alternate/Renewable Generation during an Outage,42.047781966004685,12.0,Microgrid,Installation,Installation,350000.0,900000.0,2823; 2823,2,5
+AJXF,JB Andrews,127.0,Installation Microgrid,299.1277987189123,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,2821; 2821,2,6
+ASHE,Aviano AB,52.0,Installation-wide SCADA System (Energy),84.85461608211527,12.0,Microgrid,Installation,Installation,208333.33333333334,516666.6666666667,329; 130; 330,3,7
+ASHE,Aviano AB,79.0,Access to Alternate/Renewable Generation during an Outage,43.55357973591057,12.0,Microgrid,Installation,Installation,350000.0,900000.0,133,1,8
+AWUB,Barksdale,127.0,Installation Microgrid,245.14481449126842,12.0,Microgrid,Installation,Installation,550000.0,1600000.0,331; 338,2,9
+BAEY,Beale,52.0,Installation-wide SCADA System (Energy),105.46846155659195,12.0,Microgrid,Installation,Installation,200000.0,500000.0,394,1,10
+DKFX,JB Charleston - AB,52.0,Installation-wide SCADA System (Energy),55.6561982964234,12.0,Microgrid,Installation,Installation,200000.0,500000.0,3114,1,11
+DKFX,JB Charleston - AB,127.0,Installation Microgrid,72.47223785862988,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,3070; 3071,2,12
+FGWB,Dobbins ARB,127.0,Installation Microgrid,107.8237685653475,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,1002,1,13
+FJXT,Dover,52.0,Installation-wide SCADA System (Energy),179.8272357723577,12.0,Microgrid,Installation,Installation,225000.0,550000.0,1081; 1111,2,14
+FSPM,Edwards,52.0,Installation-wide SCADA System (Energy),133.3265713795233,12.0,Microgrid,Installation,Installation,231250.0,562500.0,1353; 1368; 1375; 1321,4,15
+FTEV,Hurlburt Field,52.0,Installation-wide SCADA System (Energy),144.35672851783664,12.0,Microgrid,Installation,Installation,191666.66666666666,466666.6666666667,2464; 2508; 2456; 2485; 2476; 2537,6,16
+FTEV,Hurlburt Field,79.0,Access to Alternate/Renewable Generation during an Outage,92.45351600589585,12.0,Microgrid,Installation,Installation,350000.0,900000.0,2520,1,17
+FTFA,Eglin,49.0,Priority Load-Shedding Protocol,76.91716032110253,12.0,Microgrid,Installation,Installation,75000.0,200000.0,1420; 1455,2,18
+FTFA,Eglin,52.0,Installation-wide SCADA System (Energy),176.55016314053657,12.0,Microgrid,Installation,Installation,250000.0,600000.0,1472,1,19
+FTFA,Eglin,79.0,Access to Alternate/Renewable Generation during an Outage,135.2516639371727,12.0,Microgrid,Installation,Installation,350000.0,900000.0,1454,1,20
+FTQW,Eielson,127.0,Installation Microgrid,369.4924543755185,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,1557; 1557,2,21
+FXSB,JBER AK,49.0,Priority Load-Shedding Protocol,127.2492577369976,12.0,Microgrid,Installation,Installation,91666.66666666667,233333.33333333334,3180; 3180; 3179; 3179; 3225; 3225,6,22
+FXSB,JBER AK,127.0,Installation Microgrid,137.0798223272659,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,3183; 3183,2,23
+GHLN,FE Warren,52.0,Installation-wide SCADA System (Energy),144.50521487932494,12.0,Microgrid,Installation,Installation,175000.0,418750.0,1764; 1749; 1750; 1803,4,24
+GHLN,FE Warren,127.0,Installation Microgrid,211.27749426578274,12.0,Microgrid,Installation,Installation,550000.0,1600000.0,1802; 1822; 1781; 1823,4,25
+GJKZ,Fairchild,49.0,Priority Load-Shedding Protocol,2.941176470588235,12.0,Microgrid,Installation,Installation,75000.0,200000.0,1687; 1687,2,26
+GJKZ,Fairchild,52.0,Installation-wide SCADA System (Energy),16.666666666666668,12.0,Microgrid,Installation,Installation,225000.0,550000.0,1690; 1690,2,27
+GLEN,Schriever,49.0,Priority Load-Shedding Protocol,97.15473550839405,12.0,Microgrid,Installation,Installation,75000.0,200000.0,6823,1,28
+GLEN,Schriever,79.0,Access to Alternate/Renewable Generation during an Outage,85.68957100990028,12.0,Microgrid,Installation,Installation,350000.0,900000.0,6866; 6880,2,29
+JBAB,JBAB,52.0,Installation-wide SCADA System (Energy),190.6610347104493,12.0,Microgrid,Installation,Installation,225000.0,550000.0,2746,1,30
+JBAB,JBAB,127.0,Installation Microgrid,420.42750327922386,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,2753,1,31
+KRSM,Hill,49.0,Priority Load-Shedding Protocol,66.66666666666667,12.0,Microgrid,Installation,Installation,75000.0,200000.0,2212; 2214; 2283,3,32
+KRSM,Hill,52.0,Installation-wide SCADA System (Energy),300.6452073233441,12.0,Microgrid,Installation,Installation,200000.0,500000.0,2299,1,33
+LXEZ,Kadena AB,52.0,Installation-wide SCADA System (Energy),302.03298735752844,12.0,Microgrid,Installation,Installation,200000.0,500000.0,3585,1,34
+LXEZ,Kadena AB,127.0,Installation Microgrid,174.11802649300597,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,3586; 3590,2,35
+MAHG,Keesler,127.0,Installation Microgrid,321.23962369057693,12.0,Microgrid,Installation,Installation,600000.0,1700000.0,3713,1,36
+MHMV,Kirtland,52.0,Installation-wide SCADA System (Energy),372.0291206173761,12.0,Microgrid,Installation,Installation,200000.0,500000.0,3908; 3908,2,37
+MSET,RAF Lakenheath,127.0,Installation Microgrid,123.35961493432441,12.0,Microgrid,Installation,Installation,550000.0,1600000.0,4137; 4138; 4108; 4109,4,38
+MUHJ,JBLE-Eustis,52.0,Installation-wide SCADA System (Energy),208.76620842857193,12.0,Microgrid,Installation,Installation,208333.33333333334,516666.6666666667,3397; 3230; 3238,3,39
+NKAK,Little Rock,127.0,Installation Microgrid,494.27061277426685,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,4300; 4300,2,40
+NUEX,Luke,52.0,Installation-wide SCADA System (Energy),109.34825140621179,12.0,Microgrid,Installation,Installation,216666.66666666666,533333.3333333334,4352; 4344; 4345,3,41
+NUEX,Luke,127.0,Installation Microgrid,113.30853829272166,12.0,Microgrid,Installation,Installation,540000.0,1580000.0,4364; 4370; 4346; 4347; 4348,5,42
+NVZR,MacDill FL,127.0,Installation Microgrid,230.93616172884242,12.0,Microgrid,Installation,Installation,600000.0,1700000.0,4456,1,43
+PTFL,JBMDL,52.0,Installation-wide SCADA System (Energy),271.9284177085468,12.0,Microgrid,Installation,Installation,200000.0,500000.0,3447; 3447; 3448; 3448,4,44
+PTFL,JBMDL,127.0,Installation Microgrid,214.77827446074124,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,3453; 3453; 3512; 3512,4,45
+QFQE,RAF Mildenhall,52.0,Installation-wide SCADA System (Energy),251.8996011146541,12.0,Microgrid,Installation,Installation,218750.0,537500.0,6372; 6314; 6337; 6338,4,46
+QFQE,RAF Mildenhall,127.0,Installation Microgrid,116.10065238201868,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,6332,1,47
+QJVF,Minot,52.0,Installation-wide SCADA System (Energy),187.90113228389944,12.0,Microgrid,Installation,Installation,275000.0,650000.0,4974,1,48
+QKKA,Misawa,127.0,Installation Microgrid,134.1283874231452,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,5041; 5069,2,49
+QYZH,Mt Home,52.0,Installation-wide SCADA System (Energy),220.2081433115321,12.0,Microgrid,Installation,Installation,200000.0,500000.0,5257; 5261,2,50
+RKMF,Nellis,52.0,Installation-wide SCADA System (Energy),331.1860022353729,12.0,Microgrid,Installation,Installation,250000.0,600000.0,5522,1,51
+SMYU,Osan Air Base,52.0,Installation-wide SCADA System (Energy),176.1582683756004,12.0,Microgrid,Installation,Installation,187500.0,450000.0,5791; 5827,2,52
+SMYU,Osan Air Base,127.0,Installation Microgrid,92.61166692433076,12.0,Microgrid,Installation,Installation,575000.0,1650000.0,5757; 5792; 5793; 5748,4,53
+SXHT,Patrick,49.0,Priority Load-Shedding Protocol,100.89461622996897,12.0,Microgrid,Installation,Installation,75000.0,200000.0,5913,1,54
+SXHT,Patrick,52.0,Installation-wide SCADA System (Energy),99.35979163930182,12.0,Microgrid,Installation,Installation,225000.0,550000.0,5923; 5906,2,55
+TDKA,Peterson,52.0,Installation-wide SCADA System (Energy),151.0973802739452,12.0,Microgrid,Installation,Installation,150000.0,350000.0,5972; 6000,2,56
+TDKA,Peterson,127.0,Installation Microgrid,216.00204923676324,12.0,Microgrid,Installation,Installation,550000.0,1600000.0,5982; 5983,2,57
+UHHZ,Robins,52.0,Installation-wide SCADA System (Energy),327.4033265049601,12.0,Microgrid,Installation,Installation,200000.0,500000.0,6728; 6728,2,58
+VDYD,Scott,79.0,Access to Alternate/Renewable Generation during an Outage,63.96617216521986,12.0,Microgrid,Installation,Installation,350000.0,900000.0,6960; 6960; 6961; 6961; 6965; 6965,6,59
+VKAG,Seymour Johnson,52.0,Installation-wide SCADA System (Energy),239.94307080254944,12.0,Microgrid,Installation,Installation,200000.0,500000.0,7076,1,60
+VKAG,Seymour Johnson,127.0,Installation Microgrid,299.50222314017384,12.0,Microgrid,Installation,Installation,550000.0,1600000.0,7082; 7077,2,61
+VLSB,Shaw,52.0,Installation-wide SCADA System (Energy),178.8858922912115,12.0,Microgrid,Installation,Installation,200000.0,475000.0,7116,1,62
+VYHK,Spangdahlem AB,127.0,Installation Microgrid,107.874514244767,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,7370,1,63
+WWYK,Tinker,127.0,Installation Microgrid,525.559750840971,12.0,Microgrid,Installation,Installation,500000.0,1500000.0,7384,1,64
+XDAT,Travis,52.0,Installation-wide SCADA System (Energy),143.40566042323323,12.0,Microgrid,Installation,Installation,225000.0,550000.0,7584; 7572; 7536,3,65
+XUMU,Vandenberg,52.0,Installation-wide SCADA System (Energy),125.73667389382724,12.0,Microgrid,Installation,Installation,200000.0,500000.0,7716; 7724,2,66
+ZHTV,Wright Patterson,52.0,Installation-wide SCADA System (Energy),282.3493223649054,12.0,Microgrid,Installation,Installation,225000.0,550000.0,7930,1,67
+AGGN,Altus Air Force Base,112.0,Alternate Supply Paths (Power) (Building Level),4.901960784313724,12.0,Microgrid,Building,Installation,250000.0,700000.0,31; 44,2,68
+AJXF,JB Andrews,112.0,Alternate Supply Paths (Power) (Building Level),16.666666666666668,12.0,Microgrid,Building,Installation,212500.0,625000.0,2866; 2866; 2832; 2832; 2833; 2833; 2865; 2865,8,69
+ASHE,Aviano AB,47.0,Energy Management and Control Systems (EMCS) (Building Level),515.6600366887837,12.0,Microgrid,Building,Installation,150000.0,400000.0,143,1,70
+ASHE,Aviano AB,112.0,Alternate Supply Paths (Power) (Building Level),1.8518518518518516,12.0,Microgrid,Building,Installation,216666.66666666666,633333.3333333334,165; 140; 141,3,71
+BAEY,Beale,112.0,Alternate Supply Paths (Power) (Building Level),16.281512605042018,12.0,Microgrid,Building,Installation,250000.0,700000.0,428; 432; 440,3,72
+CRWU,Buckley,47.0,Energy Management and Control Systems (EMCS) (Building Level),364.3594690510693,12.0,Microgrid,Building,Installation,225000.0,550000.0,454; 454,2,73
+CRWU,Buckley,112.0,Alternate Supply Paths (Power) (Building Level),16.666666666666664,12.0,Microgrid,Building,Installation,250000.0,700000.0,448; 448; 455; 455; 460; 460; 489; 489,8,74
+CZQZ,Cannon,47.0,Energy Management and Control Systems (EMCS) (Building Level),124.07963579497805,12.0,Microgrid,Building,Installation,150000.0,400000.0,581,1,75
+CZQZ,Cannon,112.0,Alternate Supply Paths (Power) (Building Level),11.111111111111112,12.0,Microgrid,Building,Installation,250000.0,700000.0,563; 619,2,76
+FJXT,Dover,112.0,Alternate Supply Paths (Power) (Building Level),2.898550724637681,12.0,Microgrid,Building,Installation,233333.33333333334,666666.6666666666,1087; 1093; 1070,3,77
+FTFA,Eglin,112.0,Alternate Supply Paths (Power) (Building Level),11.163853727144867,12.0,Microgrid,Building,Installation,250000.0,700000.0,1484,1,78
+JBAB,JBAB,112.0,Alternate Supply Paths (Power) (Building Level),5.555555555555555,12.0,Microgrid,Building,Installation,250000.0,700000.0,2731; 2760,2,79
+LKTC,Creech,112.0,Alternate Supply Paths (Power) (Building Level),2.898550724637681,12.0,Microgrid,Building,Installation,233333.33333333334,666666.6666666666,778; 800; 833,3,80
+MAHG,Keesler,47.0,Energy Management and Control Systems (EMCS) (Building Level),63.02588785933815,12.0,Microgrid,Building,Installation,175000.0,450000.0,3733; 3734,2,81
+MSET,RAF Lakenheath,47.0,Energy Management and Control Systems (EMCS) (Building Level),450.5214921801994,12.0,Microgrid,Building,Installation,158333.33333333334,416666.6666666667,4102; 4122; 4103,3,82
+NVZR,MacDill FL,47.0,Energy Management and Control Systems (EMCS) (Building Level),223.78328807208118,12.0,Microgrid,Building,Installation,150000.0,400000.0,4494,1,83
+PNQS,Maxwell,112.0,Alternate Supply Paths (Power) (Building Level),18.51851851851852,12.0,Microgrid,Building,Installation,250000.0,700000.0,4715; 4730; 4768; 4803,4,84
+QKKA,Misawa,47.0,Energy Management and Control Systems (EMCS) (Building Level),186.82718365645195,12.0,Microgrid,Building,Installation,150000.0,400000.0,5056,1,85
+QKKA,Misawa,112.0,Alternate Supply Paths (Power) (Building Level),5.5555555555555545,12.0,Microgrid,Building,Installation,250000.0,700000.0,5040; 5061; 5062; 5068; 5070,5,86
+RKMF,Nellis,112.0,Alternate Supply Paths (Power) (Building Level),0.966183574879227,12.0,Microgrid,Building,Installation,200000.0,600000.0,5407,1,87
+SGBP,Offutt,47.0,Energy Management and Control Systems (EMCS) (Building Level),338.6374612382677,12.0,Microgrid,Building,Installation,150000.0,400000.0,5666,1,88
+SGBP,Offutt,112.0,Alternate Supply Paths (Power) (Building Level),6.453291699193338,12.0,Microgrid,Building,Installation,233333.33333333334,666666.6666666666,5641; 5651; 5662,3,89
+SMYU,Osan Air Base,47.0,Energy Management and Control Systems (EMCS) (Building Level),260.3873743214653,12.0,Microgrid,Building,Installation,150000.0,400000.0,5771,1,90
+SXHT,Patrick,47.0,Energy Management and Control Systems (EMCS) (Building Level),135.67257189048104,12.0,Microgrid,Building,Installation,125000.0,350000.0,5902; 5904,2,91
+TDKA,Peterson,47.0,Energy Management and Control Systems (EMCS) (Building Level),134.35666529969012,12.0,Microgrid,Building,Installation,125000.0,350000.0,5936; 5938; 5996,3,92
+TDKA,Peterson,112.0,Alternate Supply Paths (Power) (Building Level),27.77777777777778,12.0,Microgrid,Building,Installation,200000.0,600000.0,6034; 6035,2,93
+VLSB,Shaw,112.0,Alternate Supply Paths (Power) (Building Level),17.246462264150942,12.0,Microgrid,Building,Installation,225000.0,650000.0,7148; 7162,2,94
+VYHK,Spangdahlem AB,47.0,Energy Management and Control Systems (EMCS) (Building Level),54.102806607119405,12.0,Microgrid,Building,Installation,200000.0,500000.0,7360,1,95
+XUMU,Vandenberg,112.0,Alternate Supply Paths (Power) (Building Level),13.763197586727,12.0,Microgrid,Building,Installation,250000.0,700000.0,7723; 7770,2,96
+ZHTV,Wright Patterson,47.0,Energy Management and Control Systems (EMCS) (Building Level),235.9785209562758,12.0,Microgrid,Building,Installation,150000.0,400000.0,7993,1,97
+ZHTV,Wright Patterson,112.0,Alternate Supply Paths (Power) (Building Level),6.744704570791527,12.0,Microgrid,Building,Installation,225000.0,650000.0,7935; 8144,2,98
